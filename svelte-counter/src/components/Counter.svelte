@@ -39,16 +39,6 @@
 </script>
 
 <style>
-  /* Counter.svelte の <style> タグ内、またはグローバルスタイルシートに追加 */
-  .danger {
-    background-color: #dc3545; /* 赤色の背景 */
-    color: white; /* 白色のテキスト */
-  }
-
-  .danger:hover {
-    background-color: #c82333; /* ホバー時の色 */
-  }
-
   .counter-button {
     display: flex;
     align-items: center;
