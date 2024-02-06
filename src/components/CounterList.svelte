@@ -16,6 +16,10 @@
     return counters.reduce((acc, counter) => acc + counter.count, 0);
   }
 
+  function generateRandomNumber() {
+    return Math.floor(Math.random() * 100);
+  }
+
   function handleCountChange(event) {
     counters = counters.map(counter => {
       if (counter.id === event.detail.id) {
@@ -62,7 +66,7 @@
   {#each counters as counter}
     <Counter title={counter.title} count={counter.count} id={counter.id} on:countChanged={handleCountChange} on:delete={handleRemove} on:titleChanged={handleTitleChange} />
   {/each}
-  <button class="counter-append-btn" on:click={() => counters = [...counters, { id: counters.length + 1, title: `new`, count: 0 }]}>
+  <button class="counter-append-btn" on:click={() => counters = [...counters, { id: generateRandomNumber(), title: `new`, count: 0 }]}>
     Add counter
   </button>
   <div>
